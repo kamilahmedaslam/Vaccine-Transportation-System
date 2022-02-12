@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaccine Distribution and Logistics</title>
+    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li class="nav_element"><a href="index.html">Home</a></li>
+        <li class="nav_element"><a href="recipients.php">Recipients</a></li>
+        <li class="nav_element"><a href="dosages.php">Dosages</a></li>
+        <li class="nav_element"><a href="distcenters.php">Distribution Centers</a></li>
+        <li class="nav_element"><a href="manufacturers.php">Manufacturers</a></li>
+        <li class="nav_element"><a href="designers.php">Designers</a></li>
+
+    </ul>
+
+    <div class="box">
+        <h1 class="title">Request a New Shipment</h1>
+        <p class="text">This function adds a new tuple for a recipient to the database. Make sure all fields are filled.</p>
+        <form method="GET" action="add.php">
+            <div class="block">
+
+                <div class='field'>
+                    <label class="label">First Name</label>
+                    <input type="text" name="firstname" class="input" placeholder="Enter First Name" required="" maxlength="50" id="firstname">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Last Name</label>
+                    <input type="text" name="lastname" class="input" placeholder="Enter Last Name" required="" maxlength="50" id="lastname">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Email</label>
+                    <input type="text" name="email" class="input" placeholder="Enter Email" required="" maxlength="50" id="email">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Phone Number</label>
+                    <input type="text" name="number" class="input" placeholder="Enter Phone Number" required="" maxlength="10" id="number">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Country</label>
+                    <input type="text" name="country" class="input" placeholder="Enter Country" required="" maxlength="50" id="country">
+                </div>
+
+                <div class='field'>
+                    <label class="label">City
+                    </label>
+                    <input type="text" name="city" class="input" placeholder="Enter City" required="" maxlength="50" id="city">
+                </div>
+
+                <div class='field'>
+                    <label class="label">ZIP</label>
+                    <input type="text" name="zip" class="input" placeholder="Enter ZIP code" required="" maxlength="10" id="zip">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Street Address</label>
+                    <input type="text" name="street" class="input" placeholder="Enter Street Address" required="" maxlength="50" id="street">
+                </div>
+
+                <input type="submit" value="SUBMIT" class="btn">
+            </div>
+        </form>
+    </div>

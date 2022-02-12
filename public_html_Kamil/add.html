@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaccine Distribution and Logistics</title>
+    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li class="nav_element"><a href="index.html">Home</a></li>
+        <li class="nav_element"><a href="recipients.php">Recipients</a></li>
+        <li class="nav_element"><a href="dosages.php">Dosages</a></li>
+        <li class="nav_element"><a href="distcenters.php">Distribution Centers</a></li>
+        <li class="nav_element"><a href="manufacturers.php">Manufacturers</a></li>
+        <li class="nav_element"><a href="designers.php">Designers</a></li>
+
+    </ul>
+
+
+    <div class="box">
+        <h1 class="title">Request a New Shipment</h1>
+        <p class="text">This function returns adds a new tupple for a recipient to the Recipient database. Make sure all
+            fields are filled.</p>
+        <form method="GET" action="add.php">
+            <div class="block">
+
+                <div class='field'>
+                    <label class="label">First Name</label>
+                    <input type="text" class="input" placeholder="Enter First Name" required="" id="firstname">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Last Name</label>
+                    <input type="text" class="input" placeholder="Enter Last Name" required="" id="lastname">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Email</label>
+                    <input type="text" class="input" placeholder="Enter Email" required="" id="email">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Phone Number</label>
+                    <input type="text" class="input" placeholder="Enter Phone Numnber" required="" id="number">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Country</label>
+                    <input type="text" class="input" placeholder="Enter Country" required="" id="country">
+                </div>
+
+                <div class='field'>
+                    <label class="label">City
+                    </label>
+                    <input type="text" class="input" placeholder="Enter City" required="" id="city">
+                </div>
+
+                <div class='field'>
+                    <label class="label">ZIP</label>
+                    <input type="text" class="input" placeholder="Enter ZIP code" required="" id="zip">
+                </div>
+
+                <div class='field'>
+                    <label class="label">Street Address</label>
+                    <input type="text" class="input" placeholder="Enter Street Address" required="" id="street">
+                </div>
+
+                <input type="submit" value="SUBMIT" class="btn">
+            </div>
+        </form>
+    </div>
+    </div>

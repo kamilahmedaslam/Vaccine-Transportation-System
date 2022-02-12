@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaccine Distribution and Logistics</title>
+    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li class="nav_element"><a href="index.html">Home</a></li>
+        <li class="nav_element"><a href="recipients.php">Recipients</a></li>
+        <li class="nav_element"><a href="dosages.php">Dosages</a></li>
+        <li class="nav_element"><a href="distcenters.php">Distribution Centers</a></li>
+        <li class="nav_element"><a href="manufacturers.php">Manufacturers</a></li>
+        <li class="nav_element"><a href="designers.php">Designers</a></li>
+
+    </ul>
+
+    <div class="box">
+        <h1 class="title">Search a Shipment</h1>
+        <p class="text">This function returns the tuple from the database for a specific Recipient ID. </p>
+        <form method="POST" action="search.php">
+            <div class="block">
+                <div class='field'>
+                    <label class="label">Recipient ID</label>
+                    <input type="number" name="recipientid" class="input" placeholder="Enter Recipient ID" required="" id="recipientid">
+                </div>
+                <a href="search.php"><input type="submit" value="SUBMIT" class="btn"></a>
+            </div>
+        </form>
+    </div>

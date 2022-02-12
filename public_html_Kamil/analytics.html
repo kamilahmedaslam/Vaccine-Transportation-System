@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaccine Distribution and Logistics</title>
+    <link rel="stylesheet" href="ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+
+</head>
+
+<body>
+
+    <ul class="navbar">
+        <li class="nav_element"><a href="index.html">Home</a></li>
+        <li class="nav_element"><a href="recipients.php">Recipients</a></li>
+        <li class="nav_element"><a href="dosages.php">Dosages</a></li>
+        <li class="nav_element"><a href="distcenters.php">Distribution Centers</a></li>
+        <li class="nav_element"><a href="manufacturers.php">Manufacturers</a></li>
+        <li class="nav_element"><a href="designers.php">Designers</a></li>
+
+    </ul>
+
+    <div class="tool">
+
+        <div class="box">
+            <h1 class="title">Analytics</h1>
+            <p class="text">Use the Analytics Tool to filter recipient searches with other relations. The search is
+                essentially a
+                query into the Recipient database and will return tupples that fit your filters.</p>
+            <div method="POST" action="search.php">
+
+                <div class="block">
+                    <div class="field">
+                        <label class="label">Designer</label>
+                        <p class="control">
+                            <span class="select">
+                                <select>
+                                    <option>Select Designer</option>
+                                    <option>Pfizer-BioNTech</option>
+                                    <option>Moderna</option>
+                                    <option>Johnson and Johnson</option>
+                                </select>
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Manufacturer</label>
+                        <input type="text" class="input" placeholder="Enter Manufacturer">
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Distribution Center</label>
+                        <input type="text" class="input" placeholder="Enter Distribution Center">
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Recipient Country</label>
+                        <input type="text" class="input" placeholder="Enter Recipient Country">
+                    </div>
+
+                    <div class="field">
+                        <label class="label">Dosage ID</label>
+                        <input type="text" class="input" placeholder="Enter Dosage ID">
+                    </div>
+
+
+                </div>
+                <a href="analytics.php"><input type="submit" value="SUBMIT" class="btn"></a>
+            </div>
+        </div>
+        </form>
+    </div>

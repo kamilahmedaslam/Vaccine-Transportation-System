@@ -1,0 +1,68 @@
+USE jpappas2_1;
+
+DROP TABLE IF EXISTS `recipients`;
+DROP TABLE IF EXISTS `dosages`;
+DROP TABLE IF EXISTS `manufacturers`;
+DROP TABLE IF EXISTS `designers`;
+DROP TABLE IF EXISTS `distribution_centers`;
+
+CREATE TABLE designers (
+desID INT(6) AUTO_INCREMENT PRIMARY KEY,
+desName TINYTEXT NOT NULL,
+desPhone VARCHAR(30) NOT NULL,
+desEmail VARCHAR(30) NOT NULL,
+desCountry TINYTEXT NOT NULL,
+desCity TINYTEXT NOT NULL,
+desZip INT(10) NOT NULL,
+desStreet VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE manufacturers (
+manID INT(6) AUTO_INCREMENT PRIMARY KEY,
+manName TINYTEXT NOT NULL,
+manPhone VARCHAR(30) NOT NULL,
+manEmail VARCHAR(30) NOT NULL,
+manCountry TINYTEXT NOT NULL,
+manCity TINYTEXT NOT NULL,
+manZip INT(10) NOT NULL,
+manStreet VARCHAR(30) NOT NULL,
+desID_created INT(6) NOT NULL,
+FOREIGN KEY (desID_created) REFERENCES designers(desID) ON DELETE CASCADE
+);
+
+CREATE TABLE dosages (
+dosID INT(6) AUTO_INCREMENT PRIMARY KEY,
+dosDate DATE NOT NULL,
+desID_received INT(6),
+manID_received INT(6),
+FOREIGN KEY (desID_received) REFERENCES designers(desID) ON DELETE CASCADE,
+FOREIGN KEY (manID_received) REFERENCES manufacturers(manID) ON DELETE CASCADE
+);
+
+CREATE TABLE distribution_centers (
+dcID INT(6) AUTO_INCREMENT PRIMARY KEY,
+dcName TINYTEXT NOT NULL,
+dcPhone VARCHAR(30) NOT NULL,
+dcEmail VARCHAR(30) NOT NULL,
+dcCountry TINYTEXT NOT NULL,
+dcCity TINYTEXT NOT NULL,
+dcZip INT(10) NOT NULL,
+dcStreet VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE recipients (
+recID INT(6) AUTO_INCREMENT PRIMARY KEY,
+recFName TINYTEXT NOT NULL,
+recLName TINYTEXT NOT NULL,
+recPhone VARCHAR(30) NOT NULL,
+recEmail VARCHAR(30) NOT NULL,
+recCountry TINYTEXT NOT NULL,
+recCity TINYTEXT NOT NULL,
+recZip INT(10) NOT NULL,
+recStreet VARCHAR(30) NOT NULL,
+recDate DATE NOT NULL,
+dosID_received INT(6),
+dcID_visited INT(6),
+FOREIGN KEY (dosID_received) REFERENCES dosages(dosID) ON DELETE CASCADE,
+FOREIGN KEY (dcID_visited) REFERENCES distribution_centers(dcID) ON DELETE CASCADE
+);
